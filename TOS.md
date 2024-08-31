@@ -21,4 +21,4 @@ The Bot offers various commands and features that may change over time. The Bot 
 The Bot Developer reserves the right to terminate the User access to the Bot at any time, for any reason, including but not limited to violation of these terms. Additionally, server administrators may remove the Bot from their server at any time.
 
 ## 7. Changes to the Terms of Service
-The Bot Developer may update these Terms of Service from time to time. Any changes will be posted on the [Official CelesteBOT Discord Server](https://discord.gg/mcy98wTnxj) with an updated revision date. The User continued use of the Bot after any changes to the Terms of Service will constitute acceptance of those changes.
+The Bot Developer may update these Terms of Service from time to time. Any changes will be posted on the [Official CelesteBOT Discord Server](https://discord.gg/ZRYC8R4W) with an updated revision date. The User continued use of the Bot after any changes to the Terms of Service will constitute acceptance of those changes.
