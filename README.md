@@ -25,5 +25,7 @@ Execute the command /dialog and fill out some options to create a dialog box.
 
 > :warning: **Caution:** The bot is still under development so bug *are* to be expected.
 
+> :memo: By using the bot, you agree to the CelesteBOT's [Terms of Service](https://github.com/UltimateCartX/CelesteBOT/blob/main/TOS.md) and [Privacy Policy](https://github.com/UltimateCartX/CelesteBOT/blob/main/PRIVACY.md)
+
 # Credits
 The textures used to create dialog boxes are from the game [Celeste](https://www.celestegame.com/) and are owned by [Maddy Makes Games, Inc](https://www.maddymakesgames.com/)
