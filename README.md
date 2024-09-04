@@ -31,5 +31,21 @@ Create dialog boxes in the style of <a href="https://www.celestegame.com/">Celes
 
 > :memo: By using the bot, you agree to the CelesteBOT's [Terms of Service](https://github.com/UltimateCartX/CelesteBOT/blob/main/TOS.md) and [Privacy Policy](https://github.com/UltimateCartX/CelesteBOT/blob/main/PRIVACY.md)
 
+# Source
+Want to host the bot yourself and customize every features to your likings? Follow the instructions below:
+## Prerequisties
+- [Node.js](https://nodejs.org/en/) (v16.11.0 or higher)
+- [Git](https://git-scm.com/downloads)
+## Installation
+- Open a terminal in your desired directory and run these commands:
+```bash
+git clone https://github.com/UltimateCartX/CelesteBOT.git
+cd CelesteBOT/source
+npm install
+```
+- Add your bot's token and application id in `config.json`
+- Run `npm run start` to start the bot!
+## Customization
+With your own instance of the bot, you can add, edit or remove pretty much anything! Follow the [wiki](https://github.com/UltimateCartX/CelesteBOT/wiki) for more information on how to customize the features.
 # Credits
 The textures used to create dialog boxes are from the game [Celeste](https://www.celestegame.com/) and are owned by [Maddy Makes Games, Inc](https://www.maddymakesgames.com/)
