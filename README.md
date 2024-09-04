@@ -47,5 +47,15 @@ npm install
 - Run `npm run start` to start the bot!
 ## Customization
 With your own instance of the bot, you can add, edit or remove pretty much anything! Follow the [wiki](https://github.com/UltimateCartX/CelesteBOT/wiki) for more information on how to customize the features.
+# Contribution
+There are 6 ways you can contribute to the project:
+- **Talking about it and sharing it online**
+- **Reporting bugs and issues**
+- **Suggesting new ideas** 
+- **Adding or updating locales**
+- **Forking and improving the bot**
+- **Donating money on my [Ko-Fi page](https://ko-fi.com/ultimatecartx)**
+
+> :warning: There will NEVER be features exclusive to donators
 # Credits
 The textures used to create dialog boxes are from the game [Celeste](https://www.celestegame.com/) and are owned by [Maddy Makes Games, Inc](https://www.maddymakesgames.com/)
