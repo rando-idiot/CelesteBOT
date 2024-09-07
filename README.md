@@ -40,10 +40,10 @@ Want to host the bot yourself and customize every features to your likings? Foll
 - Open a terminal in your desired directory and run these commands:
 ```bash
 git clone https://github.com/UltimateCartX/CelesteBOT.git
-cd CelesteBOT/source
+cd CelesteBOT
 npm install
 ```
-- Add your bot's token and application id in `config.json`
+- Rename `empty-config.json` to `config.json` and add your bot's token and app id in it
 - Run `npm run start` to start the bot!
 ## Customization
 With your own instance of the bot, you can add, edit or remove pretty much anything! Follow the [wiki](https://github.com/UltimateCartX/CelesteBOT/wiki) for more information on how to customize the features.
