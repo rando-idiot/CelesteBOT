@@ -15,6 +15,7 @@ module.exports = {
             .setNameLocalizations(loc.get("command.postcard.option.to.name.strict"))
             .setDescription(loc.find("command.postcard.option.to.description"))
             .setDescriptionLocalizations(loc.get("command.postcard.option.to.description"))
+            .setMaxLength(12)
             .setRequired(true)
         )
         .addStringOption(option => option

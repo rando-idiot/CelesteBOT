@@ -93,11 +93,11 @@
     "command.dialog.reply": "Dialog box sent successfully",
 
     "command.postcard.name.strict": "postcard",
-    "command.postcard.description": "postcard",
+    "command.postcard.description": "Create a new postcard",
     "command.postcard.option.to.name.strict": "to",
-    "command.postcard.option.to.description": "to",
+    "command.postcard.option.to.description": "The name of the recipient",
     "command.postcard.option.content.name.strict": "content",
-    "command.postcard.option.content.description": "content",
+    "command.postcard.option.content.description": "The content of the postcard",
 
     "command.list.name.strict": "list",
     "command.list.description": "List portraits of a character",

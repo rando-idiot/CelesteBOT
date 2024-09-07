@@ -92,6 +92,13 @@
     "command.dialog.subcommand.theo_mirror.description": "Create a new Mirror Theo dialogue box",
     "command.dialog.reply": "Dialogue box sent successfully",
 
+    "command.postcard.name.strict": "postcard",
+    "command.postcard.description": "Create a new postcard",
+    "command.postcard.option.to.name.strict": "to",
+    "command.postcard.option.to.description": "The name of the recipient",
+    "command.postcard.option.content.name.strict": "content",
+    "command.postcard.option.content.description": "The content of the postcard",
+
     "command.list.name.strict": "list",
     "command.list.description": "List portraits of a character",
     "command.list.option.name.strict": "character",

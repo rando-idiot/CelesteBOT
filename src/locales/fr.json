@@ -92,6 +92,13 @@
     "command.dialog.subcommand.theo_mirror.description": "Créé une nouvelle boîte de dialogue de Theo Mirroir",
     "command.dialog.reply": "Boîte de dialogue envoyée avec succès",
 
+    "command.postcard.name.strict": "carte-postale",
+    "command.postcard.description": "Créé une nouvelle carte postale",
+    "command.postcard.option.to.name.strict": "a",
+    "command.postcard.option.to.description": "Le nom du destinataire",
+    "command.postcard.option.content.name.strict": "contenu",
+    "command.postcard.option.content.description": "Le contenu de la carte postale",
+
     "command.list.name.strict": "liste",
     "command.list.description": "Liste les portraits d'un personnage",
     "command.list.option.name.strict": "personnage",

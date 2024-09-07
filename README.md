@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-Create dialog boxes in the style of <a href="https://www.celestegame.com/">Celeste</a> directly inside of Discord.
+Create dialog boxes (and more!) in the style of <a href="https://www.celestegame.com/">Celeste</a> directly inside of Discord.
 </p>
 
 <p align="center">
@@ -19,7 +19,8 @@ Create dialog boxes in the style of <a href="https://www.celestegame.com/">Celes
 </p>
 
 # Features
-- Easily create dialog boxes.
+- Create dialog boxes.
+- Create postcards.
 - ...
 - That's it! (for now)
 
@@ -58,4 +59,4 @@ There are 6 ways you can contribute to the project:
 
 > :warning: There will NEVER be features exclusive to donators
 # Credits
-The textures used to create dialog boxes are from the game [Celeste](https://www.celestegame.com/) and are owned by [Maddy Makes Games, Inc](https://www.maddymakesgames.com/)
+The textures used to create dialog boxes and postcards are from the game [Celeste](https://www.celestegame.com/) and are owned by [Maddy Makes Games, Inc](https://www.maddymakesgames.com/)
