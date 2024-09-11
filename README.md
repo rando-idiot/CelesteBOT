@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="logo.png" width="256" height="256">
+  <img src="repo/logo.png" width="256" height="256">
   <br>
   CelesteBOT
   <br>
@@ -25,7 +25,7 @@ Create dialog boxes (and more!) in the style of <a href="https://www.celestegame
 - That's it! (for now)
 
 <p align="center">
-<img src="exemple.png" max-width:100% max-height:100%>
+<img src="repo/exemple.png" max-width:100% max-height:100%>
 </p>
 
 > :warning: **Caution:** The bot is still under development so bug *are* to be expected.
