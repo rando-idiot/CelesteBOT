@@ -8,18 +8,18 @@ const { Locale } = require('discord.js');
 
 //Initialize keys, using en-US as a template because english is the default language
 const locales = {};
-let template = JSON.parse(fs.readFileSync(path.join(__dirname, `../locales/en-US.json`)).toString("utf-8"))
+let template = JSON.parse(fs.readFileSync(path.join(__dirname, `../../data/locales/en-US.json`)).toString("utf-8"))
 for (const key of Object.keys(template)) {
     locales[key] = {};
 };
 
 
 //Sets the locale of each key
-const localeFiles = fs.readdirSync(path.join(__dirname, `../locales`))
+const localeFiles = fs.readdirSync(path.join(__dirname, `../../data/locales`))
 for (const f of localeFiles) {
     let locale = f.replace(".json", "")
     if (!Object.values(Locale).includes(locale)) { log.error(`Invalid locale ${locale}, not parseable by Discord`); continue };
-    const localeString = fs.readFileSync(path.join(__dirname, `../locales/${f}`)).toString("utf-8");
+    const localeString = fs.readFileSync(path.join(__dirname, `../../data/locales/${f}`)).toString("utf-8");
     let localeObject = {};
     try { localeObject = JSON.parse(localeString) } catch { log.warn(`File ${f} is not valid JSON`); continue };
     for (const [key, value] of Object.entries(localeObject)) {

@@ -2,7 +2,7 @@
   "name": "baddybot",
   "version": "1.0.0",
   "description": "Easily create Celeste dialog boxes in Discord. Written in Javascript",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",

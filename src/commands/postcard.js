@@ -2,6 +2,7 @@ const path = require('node:path');
 const { SlashCommandBuilder, AttachmentBuilder } = require("discord.js");
 const Canvas = require('@napi-rs/canvas');
 var CanvasTextWrapper = require('canvas-text-wrapper').CanvasTextWrapper;
+const log = require("../utils/log.js");
 const loc = require("../utils/loc.js");
 
 module.exports = {
@@ -30,10 +31,11 @@ module.exports = {
 
         await interaction.deferReply();
 
+        const userDisplayName = interaction.user.displayName.normalize("NFKC").trim();
         const author = interaction.options.getString("to");
         const text = interaction.options.getString("content");
 
-        const postcardPath = path.join(__dirname, `../assets/postcard.png`);
+        const postcardPath = path.join(__dirname, `../../assets/postcard.png`);
         
         const textCanvas = Canvas.createCanvas(750, 350);
         const textContext = textCanvas.getContext("2d");
@@ -51,5 +53,6 @@ module.exports = {
         const attachment = new AttachmentBuilder(await postcardCanvas.encode('png'), { name: 'postcard.png' });
 
         interaction.editReply({ files: [attachment] });
+        log.action(userDisplayName, `created a postcard`);
     }
 };

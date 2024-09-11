@@ -4,7 +4,7 @@ const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const Canvas = require('@napi-rs/canvas');
 var nodeCleanup = require('node-cleanup');
 const { token } = require('./config.json');
-const log = require("./utils/log.js");
+const log = require("./src/utils/log.js");
 
 process.stdout.write(String.fromCharCode(27) + "]0;" + `CelesteBOT` + String.fromCharCode(7));
 
@@ -18,7 +18,7 @@ Canvas.GlobalFonts.registerFromPath('./assets/Renogare.ttf', 'Renogare');
 //Load command files
 var commands = 0;
 client.commands = new Collection();
-const commandFolder = path.join(__dirname, 'commands');
+const commandFolder = path.join(__dirname, 'src/commands');
 const commandFiles = fs.readdirSync(commandFolder);
 for (const commandFile of commandFiles) {
 	const commandFilePath = path.join(commandFolder, commandFile);
@@ -30,7 +30,7 @@ log.start(`Loaded ${commands} commands`);
 
 //Load events
 var events = 0;
-const eventsPath = path.join(__dirname, 'events');
+const eventsPath = path.join(__dirname, 'src/events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 for (const file of eventFiles) {
 	const filePath = path.join(eventsPath, file);

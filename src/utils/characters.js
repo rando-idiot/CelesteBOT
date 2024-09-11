@@ -6,23 +6,23 @@ const log = require("../utils/log.js");
 const loc = require("../utils/loc.js");
 
 const characters = {};
-const characterFiles = fs.readdirSync(path.join(__dirname, `../characters`));
+const characterFiles = fs.readdirSync(path.join(__dirname, `../../data/characters`));
 const regexp = new RegExp(/^[\p{Ll}\p{Lm}\p{Lo}\p{N}\p{sc=Devanagari}\p{sc=Thai}_-]+$/u);
 for (const characterFile of characterFiles) {
     let errors = 0;
     const character = characterFile.replace(".json", "");
-    const characterJSON = fs.readFileSync(path.join(__dirname, `../characters/${characterFile}`)).toString("utf-8");
+    const characterJSON = fs.readFileSync(path.join(__dirname, `../../data/characters/${characterFile}`)).toString("utf-8");
     let characterObject = {};
 
     try { characterObject = JSON.parse(characterJSON) } catch {
-        log.error(`Could not create character "${character}": File "./characters/${characterFile}" is not valid JSON`);
+        log.error(`Could not create character "${character}": File "./data/characters/${characterFile}" is not valid JSON`);
         continue;
     };
 
     locNameCheck: {
         let key = `character.${character}.name`;
         if (loc.find(key) === undefined) {
-            log.error(`Character "${character}" is missing required localization key "${key}" in "./locales/en-US.json"`);
+            log.error(`Character "${character}" is missing required localization key "${key}" in "./data/locales/en-US.json"`);
             errors++;
             break locNameCheck;
         };
@@ -37,7 +37,7 @@ for (const characterFile of characterFiles) {
     locStrictNameCheck: {
         let key = `command.dialog.subcommand.${character}.name.strict`;
         if (loc.find(key) === undefined) {
-            log.error(`Character "${character}" is missing required localization key "${key}" in "./locales/en-US.json"`);
+            log.error(`Character "${character}" is missing required localization key "${key}" in "./data/locales/en-US.json"`);
             errors++;
             break locStrictNameCheck;
         };
@@ -58,7 +58,7 @@ for (const characterFile of characterFiles) {
     locDescriptionCheck: {
         let key = `command.dialog.subcommand.${character}.description`;
         if (loc.find(key) === undefined) {
-            log.error(`Character "${character}" is missing required localization key "${key}" in "./locales/en-US.json"`);
+            log.error(`Character "${character}" is missing required localization key "${key}" in "./data/locales/en-US.json"`);
             errors++;
             break locDescriptionCheck;
         };
@@ -103,7 +103,7 @@ for (const characterFile of characterFiles) {
             locPortraitCheck: {
                 let key = `portrait.${portrait}.name`;
                 if (loc.find(key) === undefined) {
-                    log.error(`Portrait "${portrait}" is missing required localization key "${key}" in "./locales/en-US.json"`);
+                    log.error(`Portrait "${portrait}" is missing required localization key "${key}" in "./data/locales/en-US.json"`);
                     errors++;
                     break locPortraitCheck;
                 };
@@ -115,7 +115,7 @@ for (const characterFile of characterFiles) {
                 };
             };
 
-            try { fs.readFileSync(path.join(__dirname, `../assets/portraits/${character}/${portrait}.png`)) } catch {
+            try { fs.readFileSync(path.join(__dirname, `../../assets/portraits/${character}/${portrait}.png`)) } catch {
                 log.error(`Character "${character}" is missing portrait image file "./assets/portraits/${character}/${portrait}.png"`);
                 errors++;
             };
@@ -127,7 +127,7 @@ for (const characterFile of characterFiles) {
         characterObject.textbox = "default";
     };
 
-    try { fs.readFileSync(path.join(__dirname, `../assets/textboxes/${characterObject.textbox}.png`)) } catch {
+    try { fs.readFileSync(path.join(__dirname, `../../assets/textboxes/${characterObject.textbox}.png`)) } catch {
         log.error(`Character "${character}" is missing textbox image file "./assets/textboxes/${characterObject.textbox}.png"`);
         errors++;
     };

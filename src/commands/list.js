@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { SlashCommandBuilder, EmbedBuilder, SlashCommandStringOption } = require('discord.js');
 const { characters } = require("../utils/characters.js");
+const log = require("../utils/log.js");
 const loc = require("../utils/loc.js")
 
 // I love hardcoding stuff and making this bot unbearable to use for other people
@@ -86,7 +87,7 @@ emojis.set('theo_mirror_wtf', "<:theo_mirror_wtf:1278793375193108580>");
 emojis.set('theo_mirror_yolo', "<:theo_mirror_yolo:1278793383950680116>");
 
 const embeds = new Map;
-const portraitsPath = path.join(__dirname, `../assets/portraits`);
+const portraitsPath = path.join(__dirname, `../../assets/portraits`);
 const characterFolders = fs.readdirSync(portraitsPath);
 for (const characterFolder of characterFolders) {
     const embed = new EmbedBuilder();
@@ -137,9 +138,11 @@ module.exports = {
 	data: command.toJSON(),
 
 	async execute(interaction) {
+        const userDisplayName = interaction.user.displayName.normalize("NFKC").trim();
         const character = interaction.options.getString("character");
         const embed = embeds.get(character);
         embed.setTitle(loc.find("command.list.embed.title", interaction.locale) + " " + loc.find(`character.${character}.name`, interaction.locale))
         await interaction.reply({ embeds: [embed] });
+        log.action(userDisplayName, `requested portrait list of ${loc.find(`character.${character}.name`)}`);
 	}
 };

@@ -110,8 +110,8 @@ module.exports = {
         const flipped = interaction.options.getBoolean('flipped') ?? false;
         const upsidedown = interaction.options.getBoolean('upside_down') ?? false;
 
-        const portraitPath = path.join(`../assets/portraits/${character}/${portrait}.png`);
-        const textboxPath = path.join(`../assets/textboxes/${textbox}.png`);
+        const portraitPath = path.join(__dirname, `../../assets/portraits/${character}/${portrait}.png`);
+        const textboxPath = path.join(__dirname, `../../assets/textboxes/${textbox}.png`);
         
         const dimensions = sizeOf(portraitPath);
         const portraitWidth = dimensions.width * 1.34375;
@@ -119,14 +119,6 @@ module.exports = {
         const portraitX = direction == 'left'? 192.5 - (portraitWidth / 2) : 1607.5 - (portraitWidth / 2);
         const portraitY = 200 - (portraitHeight / 2);
         const countNewline = (text.match(/\\n/g) || []).length;
-
-
-
-
-
-        
-        
-        
         
         const portraitCanvas = Canvas.createCanvas(portraitWidth, portraitHeight);
 		const portraitContext = portraitCanvas.getContext('2d');
@@ -214,7 +206,7 @@ module.exports = {
             await interaction.deleteReply();
         } else await interaction.editReply({ files: [attachment] });
 
-        log.action(userDisplayName, `created a dialog box with character ${loc.find(`character.${character}.name`)}`)
+        log.action(userDisplayName, `created a dialog box with character ${loc.find(`character.${character}.name`)}`);
         var user = await Users.findOne({ where: { userId: interaction.user.id } });
         if (!user) { user = await Users.create({ userId: interaction.user.id, displayName: interaction.user.displayName }) };
         user.increment(character);
