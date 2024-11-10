@@ -1,7 +1,7 @@
 const path = require('node:path');
 const { SlashCommandBuilder, AttachmentBuilder } = require("discord.js");
 const Canvas = require('@napi-rs/canvas');
-var CanvasTextWrapper = require('canvas-text-wrapper').CanvasTextWrapper;
+let CanvasTextWrapper = require('canvas-text-wrapper').CanvasTextWrapper;
 const log = require("../utils/log.js");
 const loc = require("../utils/loc.js");
 
