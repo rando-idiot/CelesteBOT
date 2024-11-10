@@ -25,6 +25,7 @@ module.exports = {
             .setDescription(loc.find("command.postcard.option.content.description"))
             .setDescriptionLocalizations(loc.get("command.postcard.option.content.description"))
             .setRequired(true)
+            .setMaxLength(250)
         ),
 
     async execute(interaction) {
